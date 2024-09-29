@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NicaCapital S.A.</title>
+    <link rel="stylesheet" href="EfectoLoading.css">
+</head>
+<body>
+
+    <div class="loading-container">
+    <h1 class="company-name">NicaCapital S.A.</h1> <!-- Nombre de la empresa -->
+    <img src="Vendetta.png" alt="Cargando..." class="loading-image">
+    <div class="progress-container">
+        <div class="progress-bar">
+            <span class="progress-text">0%</span>
+        </div>
+    </div>
+    <div class="loading-text">Loading</div>
+</div>
+
+
+    <script>
+        // Simulación de carga
+        let progress = 0;
+        const progressBar = document.querySelector('.progress-bar');
+        const progressText = document.querySelector('.progress-text');
+
+        const interval = setInterval(() => {
+            progress += 10; // Aumentar el progreso en 10%
+            progressBar.style.width = progress + '%'; // Actualiza el ancho de la barra
+            progressText.textContent = progress + '%'; // Actualiza el texto del porcentaje
+            if (progress >= 100) {
+                clearInterval(interval); // Detener la carga al 100%
+                setTimeout(() => {
+                    window.location.href = 'index.html'; // Redirige a tu portafolio
+                }, 500); // Esperar medio segundo antes de redirigir
+            }
+        }, 500); // Cambia cada 500 ms (0.5 segundos)
+    </script>
+
+</body>
+</html>

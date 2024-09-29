@@ -1,0 +1,72 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: black; /* Fondo negro */
+}
+
+.loading-container {
+    text-align: center;
+    position: relative; /* Para que el texto esté bien posicionado */
+}
+
+.loading-image {
+    width: 500px; /* Tamaño de la imagen ajustado a 500px */
+    margin-bottom: 20px; /* Espacio entre la imagen y la barra */
+}
+
+.progress-container {
+    width: 200px; /* Ancho reducido para la barra */
+    margin: 0 auto; /* Centrar la barra de carga */
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0%; /* Cambia esto con JavaScript para simular el progreso */
+    height: 20px;
+    background-color: green;
+    transition: width 0.5s; /* Suaviza la animación */
+    position: relative; /* Para posicionar el texto dentro */
+    display: flex; /* Usar flexbox */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+}
+
+.progress-text {
+    color: white; /* Color del texto */
+}
+
+.loading-text {
+    font-size: 24px; /* Tamaño de la fuente */
+    color: white; /* Color del texto */
+    animation: blink 1s infinite; /* Efecto de parpadeo */
+    margin-top: 10px; /* Espacio entre la barra y el texto */
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 0; /* Invisible al inicio y al final */
+    }
+    50% {
+        opacity: 1; /* Visible en el medio */
+    }
+}
+.company-name {
+    font-size: 36px; /* Tamaño adecuado */
+    color: white; /* Color del texto */
+    animation: blink 1s infinite; /* Efecto de parpadeo */
+    margin-bottom: 20px; /* Espacio entre el nombre y la imagen */
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 0; /* Invisible al inicio y al final */
+    }
+    50% {
+        opacity: 1; /* Visible en el medio */
+    }
+}
